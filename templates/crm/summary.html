@@ -23,8 +23,7 @@
         <thead>
             <tr class="bg-info">
                 <th>Total of Service Charges and Product charges
-                    ${{ sum_service_charge.service_charge__sum|floatformat:2 }} +
-                    ${{ sum_product_charge.charge__sum|floatformat:2 }}</th>
+                    ${{ sum_service_charge.service_charge__sum|addition:sum_product_charge.charge__sum|floatformat:2 }}</th>
             </tr>
         </thead>
 
